@@ -18,6 +18,8 @@ export class LeaveComponent {
     { type: 'Maternity', startDate: '11/10/2023', endDate: '11/02/2023', status: 'Approved' }
   ];
   showForm = false;
+  profilePicture: string = 'assets/img/profimg.png';
+  profilePicUrl: string | ArrayBuffer | null = null;
 
   constructor(private fb: FormBuilder) {
     this.leaveForm = this.fb.group({
