@@ -1,0 +1,253 @@
+<div routerLink="/profile-component" routerLinkActive="active">
+  <nav class="fixed top-0 z-50 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
+    <div class="px-3 py-3 lg:px-5 lg:pl-3">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center justify-start rtl:justify-end">
+          <button data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar" aria-controls="logo-sidebar"
+            type="button"
+            class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+            <span class="sr-only">Open sidebar</span>
+            <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg">
+              <path clip-rule="evenodd" fill-rule="evenodd"
+                d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z">
+              </path>
+            </svg>
+          </button>
+          <a href="/profile" class="flex ms-2 md:me-24">
+            <p class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white">
+              <span>ABC</span>limited</p>
+          </a>
+        </div>
+        <form action="#" method="GET" class="hidden md:block md:pl-2">
+          <label for="topbar-search" class="sr-only">Search</label>
+          <div class="relative  flex space-between md:w-64 md:w-96">
+            <input type="text" name="email" id="topbar-search"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-secondary-500 focus:border-secondary-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-secondary-500 dark:focus:border-secondary-500"
+              placeholder="Search" />
+            <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+              <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z">
+                </path>
+              </svg>
+            </div>
+          </div>
+        </form>
+        <div class="flex items-center">
+          <div class="flex items-center ms-3">
+            <div class="flex space-x-2 text-xs items-center">
+              <img src="assets/img/notification-4-line.png" alt="">
+              <button type="button"
+                class="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+                aria-expanded="false" data-dropdown-toggle="dropdown-user">
+                <span class="sr-only">Open user menu</span>
+                <img class="w-8 h-8 rounded-full" [src]="profilePicture"
+                  alt="user photo">
+              </button>
+              <p>Ralph Edwards</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <aside id="logo-sidebar"
+    class="fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700"
+    aria-label="Sidebar">
+    <div class="h-screen px-3 pb-4 overflow-y-auto flex flex-col justify-between bg-white dark:bg-gray-800">
+      <ul class="space-y-2 font-medium">
+          <li>
+              <a href="/leave"
+                  class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                  <img src="assets/img/home-2-line.png" alt="">
+                  <span class="flex-1 ms-3 whitespace-nowrap">Home</span>
+              </a>
+          </li>
+          <li>
+              <a href="/leave"
+                  class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                  <img src="assets/img/dashboard-line.png" alt="">
+
+                  <span class="ms-3">Dashboard</span>
+              </a>
+          </li>
+          <li>
+              <a href="/profile"
+                  class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                  <img src="assets/img/user-line.png" alt="">
+                  <span class="flex-1 ms-3 whitespace-nowrap">Profile</span>
+              </a>
+          </li>
+          <li>
+              <a href="/leave"
+                  class="flex items-center p-2 text-white rounded-lg dark:text-white bg-secondary dark:hover:bg-gray-700 group">
+                  <img src="assets/img/rest-time-fill.png" alt="">
+                  <span class="flex-1 ms-3 whitespace-nowrap">Leave</span>
+                  <span
+                      class="inline-flex items-center justify-center text-white"><i
+                          class="arrow down"><img src="assets/img/arrow-down-s-line.png" alt="">
+                      </i></span>
+              </a>
+          </li>
+          <li>
+              <a href="/leave"
+                  class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                  <img src="assets/img/book-marked-line.png" alt="">
+                  <span class="flex-1 ms-3 whitespace-nowrap">Learning</span>
+              </a>
+          </li>
+
+      </ul>
+      <ul class="items-end mb-14">
+          <li>
+              <a href="/leave"
+                  class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                  <img src="assets/img/question-line.png" alt="">
+                  <span class="flex-1 ms-3 whitespace-nowrap">Help</span>
+              </a>
+          </li>
+          <li>
+              <a href="/"
+                  class="flex items-center p-2 text-gray-900 gap-3 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                  <img src="assets/img/logout-box-r-line.png" alt="">
+                  <span>Logout</span>
+              </a>
+          </li>
+      </ul>
+  </div>
+  </aside>
+
+  <div class="mt-10 flex ml-64 p-10">
+    <div class="w-full md:mx-auto flex flex-col md:flex-row items-center text-center">
+      <img
+        class="inline-flex object-cover border-2 border-secondary rounded-full h-[304px] w-[304px]  mb-4 md:mb-0 ml-0 md:mr-5"
+        [src]="profilePicture"
+        alt="">
+      <div class="flex flex-col ">
+        <div class="md:text-justify mb-3">
+          <div class="flex flex-col gap-4 mb-5">
+            <p class="text-base">
+              Name: {{ profileForm.value.name }}
+            </p>
+            <p class="text-base">
+              Email: {{ profileForm.value.name }}
+            </p>
+
+            <ul class="mt-2 flex flex-row items-center justify-center md:justify-start ">
+              <li class="mr-8">
+                <a href="" target="_blank" aria-label="GitHub">
+                  <img src="assets/img/linkedin.png" alt="">
+                </a>
+              </li>
+
+              <li class="mr-8">
+                <a href="" target="_blank" aria-label="GitHub">
+                  <img src="assets/img/Group.png" alt="">
+                </a>
+              </li>
+
+              <li class="mr-8">
+                <a href="" target="_blank" aria-label="GitHub">
+                  <img src="assets/img/g10.png" alt="">
+                </a>
+              </li>
+
+              <li>
+                <a href="" target="_blank" aria-label="Twitter">
+                  <img src="assets/img/instagram_logo.svg.png" alt="">
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <p (click)="fileInput.click()" class="change-text text-xs text-secondary cursor-pointer">Change Profile
+              Picture</p>
+            <input type="file" accept="image/*" (change)="onFileSelected($event)" #fileInput style="display: none;">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <button *ngIf="!editMode" type="button" (click)="toggleEditMode()"
+        class="bg-secondary flex text-white py-2 px-4 mt-4 rounded">
+        <img src="assets/img/edit-2-line.png" alt="">
+        {{ editMode ? 'Save' : 'Edit' }}
+      </button>
+    </div>
+  </div>
+  <form [formGroup]="profileForm" (ngSubmit)="onSubmit()" class="flex ml-64 px-10 flex-wrap">
+    <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+      <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">Title</label>
+      <input
+        class="appearance-none block w-full text-gray-700 border border-gray-400 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+        formControlName="title" id="title" [readonly]="!editMode" type="text">
+    </div>
+
+    <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+      <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">Employee ID</label>
+      <input
+        class="appearance-none block w-full text-gray-700 border border-gray-400 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+        formControlName="employeeID" id="employeeID" [readonly]="!editMode" type="text">
+    </div>
+
+    <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+      <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">State</label>
+      <input
+        class="appearance-none block w-full text-gray-700 border border-gray-400 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+        formControlName="state" id="state" [readonly]="!editMode" type="text">
+    </div>
+
+    <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+      <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">Email</label>
+      <input
+        class="appearance-none block w-full text-gray-700 border border-gray-400 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+        formControlName="email" id="email" [readonly]="!editMode" type="email">
+    </div>
+
+    <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+      <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">Nationality</label>
+      <input
+        class="appearance-none block w-full text-gray-700 border border-gray-400 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+        formControlName="nationality" id="nationality" [readonly]="!editMode" type="text">
+    </div>
+
+    <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+      <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">Phone Number</label>
+      <input
+        class="appearance-none block w-full text-gray-700 border border-gray-400 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+        formControlName="phoneNumber" id="phoneNumber" [readonly]="!editMode" type="text">
+    </div>
+
+    <div class="relative w-full flex px-3 gap-8 my-6 md:mb-0">
+      <button *ngIf="editMode" class="btn block w-1/2 btn-secondary-outline" type="button"
+        (click)="onCancel()">Cancel</button>
+      <button *ngIf="editMode" class="btn block btn-secondary w-1/2" type="submit">Save Changes</button>
+
+      <!-- <div *ngIf="showUpdateSuccess" class=" mx-auto justify-center bg-green-200 p-4 rounded shadow-lg">
+        <div class="flex justify-between items-center">
+          <span>Update Successful</span>
+          <button type="button" class="ml-4 item-start justify-start text-black" (click)="closePopup()">x</button>
+        </div>
+      </div> -->
+
+    </div>
+
+
+  </form>
+  <div *ngIf="showUpdateSuccess" class="ml-56 mx-auto flex items-center w-[851px] justify-center p-4 h-[139px] rounded shadow-lg">
+    <div class="flex gap-6 items-center rounded space-x-3 ">
+    <img class="h-28" src="assets/img/Rectangle.png" alt="">
+    <img class="w-12 h-12" src="assets/img/Success.png" alt="">
+    <div class="flex flex-col gap-3 bg-white ">
+      <span class="font-semibold text-sm">Update Successful</span>
+      <p class="text-xs">Your information has been updated successfully</p>
+    </div>
+    </div>
+    <div class="">
+      <button type="button" class="ml-20 item-start justify-start text-2xl text-black" (click)="closePopup()">x</button>
+    </div>
+  </div>
+</div>

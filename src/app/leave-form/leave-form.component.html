@@ -1,0 +1,40 @@
+<div class="mt-10 flex flex-col items-center p-10 relative">
+    <form [formGroup]="leaveForm" (ngSubmit)="onSubmitLeave()">
+      <div class="flex shadow-lg p-10 py-20 items-center flex-wrap">
+        <div class="w-full md:w-1/2 px-3 mb-6 ">
+        <label class="" for="leaveType">Leave Type</label>
+          <select formControlName="leaveType" id="leaveType" class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
+            <option value="" disabled>Select Leave Type</option>
+            <option value="sick">Sick Leave</option>
+            <option value="casual">Casual Leave</option>
+            <option value="annual">Annual Leave</option>
+          </select>
+        </div>
+  
+        <div class="w-full md:w-1/2 px-3 mb-6 ">
+        <label class="" for="relieveOfficer">Relieve Officer</label>
+          <select formControlName="relieveOfficer" id="relieveOfficer" class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
+            <option value="" >Pick a Relieve Officer</option>
+            <option *ngFor="let officer of relieveOfficers" [value]="officer">{{officer}}</option>
+          </select>
+        </div>
+  
+        <div class="w-full md:w-1/2 px-3 mb-6">
+          <label class="" for="startDate">Start Date</label>
+          <input formControlName="startDate" type="date" id="startDate" class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
+        </div>
+  
+        <div class="w-full md:w-1/2 px-3 mb-6">
+          <label class="" for="endDate">End Date</label>
+          <input formControlName="endDate" type="date" id="endDate" class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
+        </div>
+        <div class="w-full flex px-3 gap-8 my-6 md:mb-0">
+            <button type="submit" class="bg-secondary text-white w-1/2 py-2 px-4 mr-2 rounded">SUBMIT</button>
+            <button type="button" (click)="onCancelLeave()" class="w-1/2 bg-gray-300 text-gray-700 py-2 px-4 rounded">CANCEL</button>
+          </div>
+      </div>
+  
+    
+    </form>
+  </div>
+  
